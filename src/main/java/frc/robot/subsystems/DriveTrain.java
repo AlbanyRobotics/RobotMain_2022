@@ -115,5 +115,6 @@ differentialDrive1.setMaxOutput(1.0);
         public void my_drivercade(double xSpeed, double zRotation) {
             differentialDrive1.arcadeDrive(xSpeed, zRotation);
 }
+    //Add an encoder
 }
 

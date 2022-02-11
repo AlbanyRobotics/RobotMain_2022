@@ -78,5 +78,7 @@ sparkMAX2.setIdleMode(IdleMode.kCoast);
     // here. Call these from Commands.
 
     //stuff
+    //do more stuff
+    
 }
 

@@ -77,5 +77,6 @@ sparkMAX2.setIdleMode(IdleMode.kCoast);
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
+    //stuff
 }
 

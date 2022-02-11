@@ -1,4 +1,4 @@
-package oi.limelightvision.limelight.frc;
+package frc.oi.limelightvision.limelight.frc;
 
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;

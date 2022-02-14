@@ -79,7 +79,7 @@ sparkMAX3.setIdleMode(IdleMode.kCoast);
 sparkMAX4 = new CANSparkMax(4, MotorType.kBrushless);
  
  sparkMAX4.restoreFactoryDefaults();  
-sparkMAX4.setInverted(false);
+sparkMAX4.setInverted(true);
 sparkMAX4.setIdleMode(IdleMode.kCoast);
   
 

@@ -76,9 +76,12 @@ sparkMAX2.setIdleMode(IdleMode.kCoast);
 
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-    public void mymotorrun(double speed) {
+    public void mymotorrunH(double speed) {
         sparkMAX1.set(speed);
+    }
+    public void mymotorrunL(double speed) {
         sparkMAX2.set(speed);
     }
+
 }
 

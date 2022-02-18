@@ -54,13 +54,15 @@ public class FlywheelReverse extends CommandBase {
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        m_shootBall.mymotorrun(-0.75);
+        m_shootBall.mymotorrunH(-0.75);
+        m_shootBall.mymotorrunL(-0.75);
     }
 
     // Called once the command ends or is interrupted.
     @Override
     public void end(boolean interrupted) {
-        m_shootBall.mymotorrun(0);
+        m_shootBall.mymotorrunH(0);
+        m_shootBall.mymotorrunL(0);
     }
 
     // Returns true when the command should end.

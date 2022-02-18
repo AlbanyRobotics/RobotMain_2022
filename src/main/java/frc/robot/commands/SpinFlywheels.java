@@ -54,8 +54,8 @@ public class SpinFlywheels extends CommandBase {
     //- Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        m_shootBall.mymotorrunH(0.75);
-        m_shootBall.mymotorrunL(0.75);
+        m_shootBall.mymotorrunH(.75);
+        m_shootBall.mymotorrunL(.50);
     }
 
     // Called once the command ends or is interrupted.

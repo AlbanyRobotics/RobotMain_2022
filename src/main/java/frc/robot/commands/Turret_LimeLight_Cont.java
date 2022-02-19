@@ -6,6 +6,7 @@ package frc.robot.commands;
 
 import javax.print.attribute.standard.Finishings;
 
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 import frc.robot.subsystems.TurretCon;
@@ -36,8 +37,9 @@ public class Turret_LimeLight_Cont extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    double kp = 0.5;
+    double kp = SmartDashboard.getNumber("Kp", 1.0);
     double rpm = m_limeLight.getdegRotationToTarget() * kp;
+    SmartDashboard.putNumber("Command RPM", rpm);
     if(m_limeLight.getIsTargetFound()){
       m_turretCon.mymotorVelocity(rpm);
     }else{

@@ -25,7 +25,7 @@ public class Auto_basic_Shoot_Drive extends SequentialCommandGroup {
                                   )
                 
                         ), 
-                new Drive_For_Distance(12, () -> -0.5 , () -> 0.0, driveTrain),
+                new Drive_For_Distance(48, () -> -0.5 , () -> 0.0, driveTrain),
                 new Drive_For_Distance(12, () -> 0.5 , () -> 0.0, driveTrain)
     );
   }

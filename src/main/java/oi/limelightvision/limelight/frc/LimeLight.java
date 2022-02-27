@@ -96,7 +96,6 @@ public class LimeLight {
      */
     public double getdegVerticalToTarget() {
         NetworkTableEntry ty = m_table.getEntry("ty");
-        
         double y = ty.getDouble(0.0);
         return y;
       

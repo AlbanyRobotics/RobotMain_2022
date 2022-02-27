@@ -19,13 +19,14 @@ public class Auto_basic_Shoot_Drive extends SequentialCommandGroup {
     // Add your commands in the addCommands() call, e.g.
     // addCommands(new FooCommand(), new BarCommand());
     addCommands(
-                parallel(new SpinFlywheels(() -> .18, () -> .61, shootBall).withTimeout(5),
+               /* parallel(new SpinFlywheels(() -> .18, () -> .61, shootBall).withTimeout(5),
                           sequence(new WaitCommand(2),
                                     new Survey(ballsurvey).withTimeout(5)
                                   )
                 
                         ), 
                 new Drive_For_Distance(60, () -> -0.5 , () -> 0.0, driveTrain)//,
+                */
                 //new Drive_For_Distance(12, () -> 0.5 , () -> 0.0, driveTrain)
     );
   }

@@ -81,7 +81,7 @@ private final XboxController LiftController = new XboxController(1);
     SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
     SmartDashboard.putData("IntakeArmUpDown", new IntakeArmUp( m_intakeArm ));
     SmartDashboard.putData("IntakeSpinning", new IntakeSpinning( m_intakeSpin ));
-    SmartDashboard.putData("SpinFlywheels", new SpinFlywheels(() ->.75, () -> .5, m_shootBall ));
+    //SmartDashboard.putData("SpinFlywheels", new SpinFlywheels(( m_shootBall , m_limeLight ));
     SmartDashboard.putData("Rotate Right", new RotateRight( m_turretCon ));
     SmartDashboard.putData("Rotate Left", new RotateLeft( m_turretCon ));
     SmartDashboard.putData("Survey", new Survey( m_ballSurvey ));
@@ -127,10 +127,14 @@ private final XboxController LiftController = new XboxController(1);
    */
   private void configureButtonBindings() {
 //Driver Buttons
-    final XboxControllerAxisButton rightTrigger = new XboxControllerAxisButton(DriveController, XboxController.Axis.kRightTrigger.value);        
+final XboxControllerAxisButton rightTrigger = new XboxControllerAxisButton(DriveController, XboxController.Axis.kRightTrigger.value);        
+rightTrigger.whileHeld(new SpinFlywheels( 2, m_shootBall , m_limeLight ) ,true);
+
+
+/*  final XboxControllerAxisButton rightTrigger = new XboxControllerAxisButton(DriveController, XboxController.Axis.kRightTrigger.value);        
 rightTrigger.whileHeld(new SpinFlywheels(() -> SmartDashboard.getNumber("Upper Percent", .75), () -> SmartDashboard.getNumber("Lower Percent", .5), m_shootBall ) ,true);
     SmartDashboard.putData("rightTrigger",new SpinFlywheels(() -> SmartDashboard.getNumber("Upper Percent", .75), () -> SmartDashboard.getNumber("Lower Percent", .5), m_shootBall ) );
-    
+  */  
     final XboxControllerAxisButton leftTrigger = new XboxControllerAxisButton(DriveController, XboxController.Axis.kLeftTrigger.value);        
 leftTrigger.whileHeld(new IntakeSpinning( m_intakeSpin ) ,true);
         SmartDashboard.putData("leftTrigger",new IntakeSpinning( m_intakeSpin ) );

@@ -6,6 +6,7 @@ import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import oi.limelightvision.limelight.frc.ControlMode.*;
 
 /**
@@ -95,8 +96,10 @@ public class LimeLight {
      */
     public double getdegVerticalToTarget() {
         NetworkTableEntry ty = m_table.getEntry("ty");
+        
         double y = ty.getDouble(0.0);
         return y;
+      
     }
     /**
      * ta Target Area (0% of image to 100% of image)

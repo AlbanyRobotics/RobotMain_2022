@@ -61,12 +61,13 @@ m_pidController = sparkMAX1.getPIDController();
     m_encoder = sparkMAX1.getEncoder();
 
     // PID coefficients
-    kP = 0.000007; 
+    kP = 0.000005; 
     // was 0.000005
     kI = 0;
     kD = 0; 
     kIz = 0; 
-    kFF = 0.002; 
+    kFF = 0.0015; 
+    // was 0.002
     kMaxOutput = 1; 
     kMinOutput = -1;
     maxRPM = 50;

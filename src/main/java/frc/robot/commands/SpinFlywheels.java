@@ -60,12 +60,19 @@ public class SpinFlywheels extends CommandBase {
     @Override
     public void initialize() {
     }
+    /*BackSpin
+    UPPER = -0.0043 * m_limeLight.getdegVerticalToTarget() + 0.282
+    LOWER = -0.0164 * m_limeLight.getdegVerticalToTarget() + 0.838
+      FrontSpin
+    UPPER = -0.0138 * m_limeLight.getdegVerticalToTarget() + 0.816
+    LOWER = -0.00347 * m_limeLight.getdegVerticalToTarget() + 0.341
+    */
 
     //- Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        double  m_upperPercent = (-0.0043 * m_limeLight.getdegVerticalToTarget() + 0.282);
-        double m_lowerPercent = (-0.0164 * m_limeLight.getdegVerticalToTarget() + 0.838);
+        double  m_upperPercent = (-0.0538 * m_limeLight.getdegVerticalToTarget() + 0.816);
+        double m_lowerPercent = (-0.00347 * m_limeLight.getdegVerticalToTarget() + 0.341);
         if(debug){
         SmartDashboard.putNumber("m_upperPercnet", m_upperPercent);
         SmartDashboard.putNumber("m_lowerPercnet", m_lowerPercent);
